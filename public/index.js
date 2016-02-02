@@ -4,6 +4,7 @@
         var data = $("#name").val() + "說：" + message;
         socket.emit("send", data);
         showMessage(data);
+        $("#message").val("");
     }
     function showMessage(data) {
         $(".box").append("<div>" + data + "</div>");
