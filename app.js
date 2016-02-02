@@ -8,4 +8,4 @@ io.on("connection", function(socket) {
         socket.broadcast.emit("receive", data);
     });
 });
-server.listen(3000);
+server.listen(process.env.PORT || 3000);
